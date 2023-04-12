@@ -1,7 +1,7 @@
 
 function setearFecha(){
     let fecha = new Date();
-    let dias = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
+    let dias = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
     let meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
                 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
     
@@ -10,7 +10,7 @@ function setearFecha(){
     let minutos = document.getElementById('minutos');
     let segundos = document.getElementById('segundos');
     let tipo = document.getElementById('tipo');
-    pFecha.textContent = `${dias[fecha.getDay()-1]} ${fecha.getDate()} de ${meses[fecha.getMonth()]} del ${fecha.getFullYear()}`;
+    pFecha.textContent = `${dias[fecha.getDay()]} ${fecha.getDate()} de ${meses[fecha.getMonth()]} del ${fecha.getFullYear()}`;
     minutos.textContent = fecha.getMinutes();
     segundos.textContent = fecha.getSeconds();
     if(fecha.getHours() > 12){
